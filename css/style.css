@@ -367,6 +367,17 @@ h3.my-profession {
     color: var(--text-black-900);
 }
 
+.home .icon a {
+    padding-top: 20px;
+    font-size: 30px;
+    margin: 0 .3rem;
+    color: var(--text-black-900);
+}
+
+.home .icon a:hover {
+    color: var(--skin-color);
+}
+
 .home .home-img {
     flex: 0 0 40%;
     max-width: 40%;
@@ -462,6 +473,17 @@ h3.my-profession {
 
 .about .about-content .personal-info .buttons .btn {
     text-align: center;
+}
+
+.about .about-content .personal-info .icon a {
+    padding-top: 20px;
+    font-size: 30px;
+    margin: 0 .3rem;
+    color: var(--text-black-900);
+}
+
+.about .about-content .personal-info .icon a:hover {
+    color: var(--skin-color);
 }
 
 .about .about-content .skills {
@@ -606,11 +628,15 @@ h3.my-profession {
     padding-bottom: 40px;
 }
 
+
+
 .service .service-item {
     margin-bottom: 30px;
     flex: 0 0 33.33%;
     max-width: 33.33%;
 }
+
+
 
 .service .service-item .service-item-inner {
     background-color: var(--bg-blasck-100);
@@ -726,7 +752,7 @@ h3.my-profession {
     flex: 0 0 25%;
     max-width: 25%;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 15px;
 }
 
 .contact .contact-info-item .icon {
@@ -735,6 +761,22 @@ h3.my-profession {
 
 .contact .contact-info-item .icon .fa {
     font-size: 25px;
+    color: var(--skin-color);
+}
+
+.contact .icon-2 {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.contact .icon-2 a {
+    padding-top: 20px;
+    font-size: 30px;
+    margin: 0 .3rem;
+    color: var(--text-black-900);
+}
+
+.contact .icon-2 a:hover {
     color: var(--skin-color);
 }
 
@@ -867,4 +909,5 @@ h3.my-profession {
         flex: 0 0 100%;
         max-width: 100%;
     }
+
 }
