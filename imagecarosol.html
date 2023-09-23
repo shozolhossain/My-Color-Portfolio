@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make A Responsive Carousel using SwiperJS and Flexbox - ByteWebster</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
+  <STYle>
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    section {
+      position: relative;
+      width: 100%;
+      min-height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(103, 84, 126) 0%, rgb(86, 123, 160) 90%);
+      overflow: hidden;
+    }
+
+    .set2 {
+      padding-top: 2rem;
+      position: relative;
+      width: 100%;
+      min-height: 10vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(103, 84, 126) 0%, rgb(86, 123, 160) 90%);
+      overflow: hidden;
+    }
+
+    .back-home {
+      font-size: 1.7rem;
+      color: white;
+      margin-bottom: .5rem;
+    }
+
+
+
+    .swiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+      width: 300px;
+      height: 500px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+      filter: blur(1px);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: self-start;
+    }
+
+    .swiper-slide-active {
+      filter: blur(0px);
+    }
+
+    .swiper-pagination-bullet,
+    .swiper-pagination-bullet-active {
+      background: #fff;
+    }
+
+    .swiper-slide span {
+      text-transform: uppercase;
+      color: #fff;
+      background: #1b7402;
+      padding: 7px 18px 7px 25px;
+      display: inline-block;
+      border-radius: 0 20px 20px 0px;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    .swiper-slide--one span {
+      background: #62667f;
+    }
+
+    .swiper-slide--two span {
+      background: #087ac4;
+    }
+
+    .swiper-slide--three span {
+      background: #b45205;
+    }
+
+    .swiper-slide--four span {
+      background: #087ac4;
+    }
+
+    .swiper-slide--five span {
+      background: #c4089b;
+    }
+
+    .swiper-slide--six span {
+      background: #520441;
+    }
+
+    .swiper-slide--seven span {
+      background: #520441;
+    }
+
+    .swiper-slide h2 {
+      color: #fff;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: 10px;
+      padding: 22px 45px 0 25px;
+    }
+
+    .swiper-slide p {
+      color: #fff;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      display: flex;
+      align-items: center;
+      padding: 0 25px 35px 25px;
+    }
+
+    .swiper-slide svg {
+      color: #fff;
+      width: 22px;
+      height: 22px;
+      margin-right: 5px;
+    }
+
+    .swiper-slide--one {
+      background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("/image/image-carosol/1.jpeg") no-repeat 50% 50% / cover;
+    }
+
+    .swiper-slide--two {
+      background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("/image/image-carosol/2.jpg") no-repeat 50% 50% / cover;
+    }
+
+    .swiper-slide--three {
+      background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("/image/image-carosol/10.jpeg") no-repeat 50% 50% / cover;
+    }
+
+    .swiper-slide--four {
+      background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("/image/image-carosol/11.jpeg") no-repeat 50% 50% / cover;
+    }
+
+    .swiper-slide--five {
+      background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("/image/image-carosol/13.jpeg") no-repeat 50% 50% / cover;
+    }
+
+    .swiper-slide--six {
+      background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("/image/image-carosol/14.jpeg") no-repeat 50% 50% / cover;
+    }
+
+    .swiper-slide--seven {
+      background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+        url("/image/image-carosol/15.jpeg") no-repeat 50% 50% / cover;
+    }
+
+    .swiper-3d .swiper-slide-shadow-left,
+    .swiper-3d .swiper-slide-shadow-right {
+      background-image: none;
+    }
+  </STYle>
+</head>
+
+<body>
+  <div class="set2">
+    <a href="index.html" class="back-home">Back To Blogs</a>
+  </div>
+  <section>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide swiper-slide--one">
+          <span>লালবাগের কেল্লা</span>
+          <div>
+            <h2>ছুটিগ দিন গুলো ঘুরতে ভালো লাগে।</h2>
+            <p>
+              <svg xmlns="" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              Lalbagh Fort
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide--two">
+          <span>লালবাগের কেল্লা</span>
+          <div>
+            <h2>ছুটিগ দিন গুলো ঘুরতে ভালো লাগে।</h2>
+            <p>
+              <svg xmlns="" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              Lalbagh Fort
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-slide swiper-slide--three">
+          <span>Bangladesh Bank Mosque</span>
+          <div>
+            <h2>শুক্রবারে নামাজের পরে।</h2>
+            <p>
+              <svg xmlns="" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              Bangladesh Bank Colony
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-slide swiper-slide--four">
+          <span>চাকলা ঈদগাহ</span>
+          <div>
+            <h2>ছোট বোনের শশুর বাড়ি।</h2>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              চাকলা নওগাঁ।
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-slide swiper-slide--five">
+          <span>মতিঝিল (ESM)</span>
+          <div>
+            <h2>অফিসে বসে বসে কিছু সময়।</h2>
+            <p>
+
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              Eden Bilding Motijheel
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide--six">
+          <span>মতিঝিল (ESM)</span>
+          <div>
+            <h2>অফিসে কাজ করার সময়।</h2>
+            <p>
+
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              Eden Bilding Motijheel
+            </p>
+          </div>
+        </div>
+        <div class="swiper-slide swiper-slide--seven">
+          <span>সান্তাহার স্টেশন</span>
+          <div>
+            <h2>বাসাই থেকে ঢাকা আসার সময়।</h2>
+            <p>
+
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              সান্তাহার রেলওয়ে স্টেশন
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- scripts -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+  <script>
+    var swiper = new Swiper(".swiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2,
+        slideShadows: true
+      },
+      spaceBetween: 60,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      }
+    });
+  </script>
+</body>
+
+</html>
