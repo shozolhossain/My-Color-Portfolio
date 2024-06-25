@@ -29,7 +29,16 @@ body {
     text-decoration: none;
     box-sizing: border-box;
 }
-*img{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;pointer-events:none}
+
+*img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none
+}
 
 ::after,
 ::before {
@@ -159,6 +168,25 @@ ul {
     color: yellow;
 }
 
+.btn-1 {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: white;
+    border-radius: 20%;
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+    background: var(--skin-color);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: green;
+    color: yellow;
+}
+
 .btn-2 {
     margin-top: 15px;
     margin-bottom: 7px;
@@ -200,6 +228,9 @@ ul {
 .btn-3:hover {
     transform: scale(1.30);
 }
+
+
+
 
 .shodow-dark {
     box-shadow: 0 0 20px rgba(48, 46, 77 0.15);
@@ -744,6 +775,76 @@ h3.my-profession {
     text-align: justify;
     line-height: 25px;
 }
+
+/* download Section*/
+.download .container {
+    padding-bottom: 30px;
+}
+
+
+
+.download .download-item {
+    margin-bottom: 20px;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+}
+
+
+
+.download .download-item .download-item-inner {
+    background-color: var(--bg-blasck-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    padding: 15px 15px;
+    text-align: center;
+    transition: all 0.35 ease;
+}
+
+.download .download-item .download-item-inner:hover {
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+.download .download-item .download-item-inner .icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 25% 0%;
+    display: block;
+    margin: 0 auto 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.download .download-item .download-item-inner .icon .fa {
+    font-size: 50px;
+    line-height: 60px;
+    color: var(--skin-color);
+    transition: all 0.3s ease;
+}
+
+.download .download-item .download-item-inner:hover .icon {
+    background: var(--skin-color);
+}
+
+.download .download-item .download-item-inner:hover .icon .fa {
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.download .download-item .download-item-inner h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.download .download-item .download-item-inner p {
+    font-size: 16px;
+    color: var(--text-black-700);
+    text-align: justify;
+    line-height: 25px;
+}
+
 
 /* Portfolio Section*/
 .portfolio .container {
